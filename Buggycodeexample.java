@@ -2,7 +2,7 @@ public class BuggyCodeExample {
 
     // 1. Method to find the maximum number in an array
     public static int findMax(int[] numbers) {
-        int max = 0; // BUG: Should initialize with the first element (numbers[0]) to handle negative numbers
+        int max = numbers[0]; // BUG: Should initialize with the first element (numbers[0]) to handle negative numbers
         for (int i = 1; i < numbers.length; i++) { // DEFECT: Starts from 1 instead of 0
             if (numbers[i] > max) {
                 max = numbers[i];
