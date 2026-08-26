@@ -13,7 +13,7 @@ public class BuggyCodeExample {
 
     // 2. Method to print the elements of an array
     public static void printArray(int[] arr) {
-        for (int i = 0; i <= arr.length; i++) { // BUG: Should use '<' instead of '<=' to prevent ArrayIndexOutOfBoundsException
+        for (int i = 0; i < arr.length; i++) { // BUG: Should use '<' instead of '<=' to prevent ArrayIndexOutOfBoundsException
             System.out.println(arr[i]);
         }
     }
