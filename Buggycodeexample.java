@@ -24,7 +24,7 @@ public class BuggyCodeExample {
         for (int i = 0; i < numbers.length; i++) {
             sum += numbers[i];
         }
-        return sum / numbers.length; // DEFECT: Integer division; should cast 'sum' or 'numbers.length' to 'double'
+        return (double) sum / numbers.length; // DEFECT: Integer division; should cast 'sum' or 'numbers.length' to 'double'
     }
 
     // 4. Main method to test the above methods
